@@ -10,7 +10,7 @@ public class PageController {
 	@RequestMapping(value = {"/" , "/home" , "/index"})
 	public ModelAndView index() {
 		 ModelAndView mv =new ModelAndView( "page" );
-		 mv.addObject("greeting" , "welcome to spring web mvc"); 
+		 mv.addObject("greeting" , "welcome to spring Web MVC"); 
 		 return mv; 
 	}
 	}
