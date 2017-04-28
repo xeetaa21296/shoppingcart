@@ -1,15 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
 
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<%@taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 
 
-<spring:url var="css" value="/resources/css"/>
-<spring:url var="js" value="/resources/js"/>
-<spring:url var="images" value="/resources/images"/>
+<spring:url var="css" value="/resources/css" />
+<spring:url var="js" value="/resources/js" />
+<spring:url var="images" value="/resources/images" />
 
-<c:set var="contextRoot" value="${pageContext.request.contextPath}"/>
+<c:set var="contextRoot" value="${pageContext.request.contextPath}" />
 
 
 <!DOCTYPE html>
@@ -17,67 +17,74 @@
 
 <head>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
 
-    <title>onlineshopping - ${title}</title>
-    
-    <script>
-    window.menu = '${title}';
-    </script>
+<title>onlineshopping - ${title}</title>
 
-    <!-- Bootstrap Core CSS -->
-    <link href="${css}/bootstrap.min.css" rel="stylesheet">
+<script>
+	window.menu = '${title}';
+</script>
 
-    <!-- Custom CSS -->
-    <link href="${css}/myapp.css" rel="stylesheet">
+<!-- Bootstrap Core CSS -->
+<link href="${css}/bootstrap.min.css" rel="stylesheet">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
+<!-- Bootstrap darktheme CSS -->
+<link href="${css}/bootstrap-darktheme.css" rel="stylesheet">
+
+<!-- Custom CSS -->
+<link href="${css}/myapp.css" rel="stylesheet">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
 </head>
 
+
+
 <body>
+	<div class="wrapper">
+		<!-- navigation -->
 
-   <!-- navigation -->
-   
-   <%@include file="./shared/navbar.jsp" %>
+		<%@include file="./shared/navbar.jsp"%>
 
-    <!-- Page Content -->
-    <!-- loading home page -->
-    <c:if test="${userClickHome == true}">
-     <%@include file="home.jsp" %>
-    </c:if>
-     
-    <!-- load only when user clicks about -->
-     <c:if test="${userClickAbout == true}">
-     <%@include file="about.jsp" %>
-    </c:if>
-     
-     <!-- load only when user clicks contact -->
-     <c:if test="${userClickContact == true}">
-     <%@include file="contact.jsp" %>
-    </c:if>
-     
-   <!-- footer -->
-   <%@include file="./shared/footer.jsp" %>
+		<!-- Page Content -->
 
-    <!-- jQuery -->
-    <script src="${js}/jquery.js"></script>
+		<div class="content">
+			<!-- loading home page -->
+			<c:if test="${userClickHome == true}">
+				<%@include file="home.jsp"%>
+			</c:if>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="${js}/bootstrap.min.js"></script>
+			<!-- load only when user clicks about -->
+			<c:if test="${userClickAbout == true}">
+				<%@include file="about.jsp"%>
+			</c:if>
 
-    <!-- self coded javascript -->
-    <script src="${js}/myapp.js"></script>
-    
+			<!-- load only when user clicks contact -->
+			<c:if test="${userClickContact == true}">
+				<%@include file="contact.jsp"%>
+			</c:if>
+		</div>
+		<!-- footer -->
+		<%@include file="./shared/footer.jsp"%>
+
+		<!-- jQuery -->
+		<script src="${js}/jquery.js"></script>
+
+		<!-- Bootstrap Core JavaScript -->
+		<script src="${js}/bootstrap.min.js"></script>
+
+		<!-- self coded javascript -->
+		<script src="${js}/myapp.js"></script>
+	</div>
 </body>
 
 </html>
