@@ -1,13 +1,14 @@
 package net.xc.backend.dto;
 
-public class category {
+public class Category {
+	
 	
 	
 	public int getId() {
-		return Id;
+		return id;
 	}
 	public void setId(int id) {
-		Id = id;
+		this.id = id;
 	}
 	public String getName() {
 		return name;
@@ -33,12 +34,15 @@ public class category {
 	public void setActive(boolean active) {
 		this.active = active;
 	}
+	
 	/*
-	 * private fields
-	 * */ 
-	private int Id;
+	 * private field*/
+	
+	
+	private int id;
 	private String name;
 	private String description;
 	private String imageurl;
 	private boolean active = true;
+
 }
