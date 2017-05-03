@@ -14,7 +14,7 @@ import org.springframework.orm.hibernate5.LocalSessionFactoryBuilder;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
-@ComponentScan(basePackages = { "net.xc.backend.dto" })
+@ComponentScan(basePackages = { "net.xc.backend.dto"})
 @EnableTransactionManagement
 public class HibernateConfig {
 

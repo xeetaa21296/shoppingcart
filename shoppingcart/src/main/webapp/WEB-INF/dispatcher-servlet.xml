@@ -12,7 +12,7 @@
 
 
 	<context:component-scan base-package="net.xc.shoppingcart.controller" />
-	<context:component-scan base-package="net.xc.backend.daoimpl" />
+	<context:component-scan base-package="net.xc.backend" />
 
 	<bean id="viewResolver"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">

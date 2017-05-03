@@ -10,3 +10,5 @@ is_active BOOLEAN,
 CONSTRAINT pk_category_id PRIMARY KEY (id)
 
 );
+
+INSERT INTO category (name, description,image_url,is_active)VALUES('Salmon', 'this is decription for fish category', 'cat3_png', true);
