@@ -35,6 +35,7 @@
 <!-- Bootstrap darktheme CSS -->
 <link href="${css}/bootstrap-darktheme.css" rel="stylesheet">
 
+
 <!-- Custom CSS -->
 <link href="${css}/myapp.css" rel="stylesheet">
 
@@ -89,6 +90,10 @@
 
 		<!-- Bootstrap Core JavaScript -->
 		<script src="${js}/bootstrap.min.js"></script>
+
+        <!-- datatable plugin -->
+		<script src="${js}/jquery.dataTables.js"></script>
+		
 
 		<!-- self coded javascript -->
 		<script src="${js}/myapp.js"></script>
